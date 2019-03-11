@@ -1,0 +1,8 @@
+<h3 class="text-primary" id="heading1">Division</h3>
+
+<app-division-form></app-division-form>
+<div class="container-fluid" id="listcontainer">
+    <h4>Division List</h4>
+    <hr>
+    <app-division-list [divisions]="divisions" (onUpdate)="updateDivision($event)"></app-division-list>
+</div>

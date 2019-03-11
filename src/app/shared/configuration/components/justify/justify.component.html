@@ -1,0 +1,36 @@
+<br>
+<form [formGroup]="justification_form" >
+    <div class="row">
+        <div class="col-lg-3">
+                <div class="form-group">
+                    <label>User Code</label>
+                    <input formControlName="user_code" class="form-control">
+                </div>
+        </div>
+        <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Remarks</label>
+                    <input class="form-control" formControlName="remarks">
+                </div>
+        </div>
+    </div>
+    <!-- / .row --> 
+    <div class="row">
+        <div class="col-lg-3">
+                <div class="form-group">
+                    <label>Justification</label>
+                    <textarea class="form-control" rows="3" cols="200" formControlName="justification"></textarea >
+                </div>
+        </div>
+    </div>
+    <!-- / .row -->
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Justification Doc</label>
+                <input type="file" (change)= "onFileChange($event)" fornControlName="justification_file">
+            </div>
+        </div>
+    </div>
+    <!-- / .row --> 
+</form>

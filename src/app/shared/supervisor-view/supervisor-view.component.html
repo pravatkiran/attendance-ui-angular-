@@ -1,0 +1,101 @@
+<h3 class="text-primary" id="super">Supervisor View </h3><hr>
+<form [formGroup]="supervisor_view_form">
+    <div class="container-fluid" style="background-color:rgba(153, 201, 202, 0.205);">
+        <div class="row" style="padding-top:10px;">
+            <div class="col-lg-2">
+                
+                    <div class="form-group">
+                        <label>Department Code </label>
+                        <input class="form-control" formControlName="department_code">
+                    </div>
+                
+            </div>
+            <div class="col-lg-2">
+                
+                    <div class="form-group">
+                        <label>Employee code </label>
+                        <input class="form-control" formControlName="employee_code">
+                    </div>
+                
+            </div>
+        </div>
+        <!-- / .row -->
+        <div class="row">
+            <div class="col-lg-2">
+                
+                    <div class="form-group">
+                        <label>From </label>
+                        <input class="form-control" formControlName="date_from">
+                    </div>
+                
+            </div>
+            <div class="col-lg-2">
+                
+                    <div class="form-group">
+                        <label>To </label>
+                        <input class="form-control" formControlName="date_to">
+                    </div>
+                
+            </div>
+        </div>
+        <!-- / .row --> 
+        <div class="row">
+            <div class="col-lg-3">
+                
+                    <div class="form-group">
+                        <label>Filter</label>
+                        <select class="form-control">
+                            <option>Justification</option>
+                            <option>Verified by</option>
+                        </select>
+                    </div>
+                
+            </div>
+        </div>
+        <!-- / .row --> 
+    </div>
+    <hr>
+    <div class="container-fluid" style="background-color:rgba(153, 201, 202, 0.205);" id="tcontainer">
+        <div class="row" id="tablerow">
+            <div class="col-lg-11">
+                <table width=100% datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+                class="table table-straped table-bordered table-hover"> 
+                    <thead>
+                        <tr>
+                            <th>User Code</th>
+                            <th>Date</th>
+                            <th>In/Out</th>
+                            <th>Remarks</th>
+                            <th>Justification</th>
+                            <th>
+                            <select style="width:50%" class="form-control">
+                                <option>Justify All</option>
+                                <option>Verify All</option>
+                                        
+                            </select>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let supervisor-view of supervisor-views">
+                            <td>{{supervisor-view.user_code}}</td>
+                            <td>{{supervisor-view.date}}</td>
+                            <td>{{supervisor-view.in || supervisor-view.out</td>
+                            <td>{{supervisor-view.remarks}}</td>
+                            <td>{{supervisor-view.justification}}</td>
+                            <td>
+                            <label class="checkbox-inline">
+                                <input type="checkbox">
+                            </label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table> 
+            </div>
+            <!-- / .col-lg-12 --> 
+        </div>
+        <!-- / .row --> 
+    </div>
+</form>
+
+            

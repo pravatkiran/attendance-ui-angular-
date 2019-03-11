@@ -1,0 +1,8 @@
+<h3 class="text-primary" id="heading1">Grade </h3>
+
+<app-grade-form></app-grade-form>
+    <div class="container-fluid">
+        <h4>Grade List</h4>
+        <hr>
+        <app-grade-list [grades]='grade' (onUpdate)="updateGrade($event)"></app-grade-list>
+    </div>

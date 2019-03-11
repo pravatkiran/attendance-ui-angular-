@@ -1,0 +1,33 @@
+<ng-template #content let-c="close" let-d="dismiss">
+
+  <div class="modal-header" style="background-color:rgba(174, 203, 206, 0.384);">
+    <h4 class="modal-title" id="modal-basic-title">
+      <ng-content select=".title">
+
+      </ng-content>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </h4>
+
+  </div>
+  <div class="modal-body" style="width: auto">
+    <div class="container-fluid">
+      <ng-content select=".body">
+
+      </ng-content>
+    </div>
+  </div>
+  <div class="modal-footer" style="margin:0px;">
+
+    <ng-content select=".footer">
+
+    </ng-content>
+    <span>
+    </span>
+  </div>
+
+
+</ng-template>
+
+<button class="btn btn-sm btn-primary" (click)="openLg(content)" style="float:left;">Add</button>

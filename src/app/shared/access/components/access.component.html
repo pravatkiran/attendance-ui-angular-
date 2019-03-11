@@ -1,0 +1,113 @@
+
+<h3 id= "heading1" class="text-primary">Access</h3>
+<div class="panel panel-default">
+        <form [formGroup]="access_form">
+        <div class="panel-body">
+            
+            <div class="row">
+            
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label for="user">Username</label>
+                            <input formControlName="username" class="form-control" id="username" name="Uname">
+                        </div>
+                    
+                </div>
+                <!-- / .col-lg-3 (nested) --> 
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label for="pwd">Password</label>
+                            <input formControlName="password" type="password" class="form-control" id="pwd" name="password">
+                        </div>
+                    
+                </div>
+                <!-- / .col-lg-3 (nested) --> 
+            </div>
+            <!-- /.row (nested) -->
+            <div class="row">
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label>RFID </label>
+                            <input formControlName="rfid" class="form-control">
+                        </div>
+                    
+                </div>
+                <!-- / .col-lg-3 --> 
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label>PIN </label>
+                            <input formControlName="pin" class="form-control" type="password">
+                        </div>
+                    
+                </div>
+                <!-- / .col-lg-3 -->
+            </div>
+            <!-- / .row (nested) --> 
+            <div class="row">
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label for="security">Security Code </label>
+                            <input formControlName="security_code" type="password" class="form-control" id="security" name="Security-code">
+                        </div>
+                    
+                </div>
+                <!-- / .col-lg-3 -->
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label>Public Key </label>
+                            <input formControlName="public_key" class="form-control">
+                        </div>
+                    
+                </div>
+                <!-- / .col-lg-3 -->
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label>Private Key </label>
+                            <input formControlName="private_key" class="form-control">
+                        </div>
+                    
+                </div>
+                <!-- / .col-lg-3 --> 
+            </div>
+            <!-- row --> 
+            <div class="row">
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label>Enable </label><div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs3" value="option3" formControlName="checkbox1">Desktop
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs1" value="option1" checked formControlName="checkbox2">APP
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs2" value="option2" formControlName="checkbox3">WEB
+                                </label>
+                            </div>
+            
+                        </div>
+                    
+                </div>
+                <!-- / .col-lg-3 -->
+            </div>
+            <!-- / .row --> 
+            <div class="row" id="row1">
+                <button type="submit" class="btn btn-primary" id="button1" (click)="saveAccess(access)">Save </button>
+                <button type="cancel" class="btn btn-primary">Cancel </button>
+            </div>
+            <!-- / .row --> 
+        </div>
+    </form>
+</div>

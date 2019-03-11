@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <form [formGroup]="division_form"> 
+       <div class="row">
+           <div class="col-lg-3">
+                   <div class="form-group">
+                       <label>Division Code </label>
+                       <input class="form-control" formControlName="division_code">
+                   </div>
+               
+           </div>
+           <!-- / .col-lg-3 -->
+           <div class="col-lg-3">
+               
+                   <div class="form-group">
+                       <label>Division Name </label>
+                       <input class="form-control" formControlName="division_name">
+                   </div>
+               
+           </div>
+           <!-- / .col-lg-3 --> 
+       </div>
+       <!-- / .row --> 
+       <div class="row">
+           <div class="col-lg-3">
+               
+                   <div class="form-group">
+                       <label for="alias">Alias </label>
+                       <input formControlName="division_alias" type="password" class="form-control" id="alias" name="Alias">
+                   </div>
+               
+           </div>
+           <!-- / .col-lg-3 -->
+       </div> 
+       <!-- / .row --> 
+       <div class="row">
+           <div class="col-lg-12">
+                   <div class="form-group">
+                       <!-- <label>
+                           <input type="file" (change)= "onFileChange($event)" formControlName="division_file">
+                       </label> -->
+                       <!-- <button type="button" [disabled]="!onFileChange" (click)="upload()">Upload</button> -->
+                   </div>
+               </div>
+       </div>
+       <div class="button-group">
+        <button type="button" class="btn btn-primary" (click)="saveDivision()">{{ !isUpdate ? 'Save': 'Update' }}</button>
+      </div>
+   </form>
+</div>

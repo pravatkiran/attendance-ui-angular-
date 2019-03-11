@@ -1,0 +1,33 @@
+
+<div class="row">
+    <div class="col-lg-12">
+            <table width="100%" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+            class="table table-straped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>S.N </th>
+                        <th>Code </th>
+                        <th>Job Title </th>
+                        <th>Alias</th>
+                        <th *ngIf="displayActions"><button type="button" class="btn btn-outline btn-primary">Add </button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor= "let jobTitle of jobTitles; let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{jobTitle.job_title_code}}</td>
+                        <td>{{jobTitle.job_title_name}}</td>
+                        <td>{{jobTitle.job_title_alias}}</td>
+                        <td *ngIf="displayActions">
+                            <button type="button" class="btn btn-primary m-r-5px" (click)='editTitle(jobTitle)'>
+                            <span class="glyphicon glyphicon-edit"></span>Edit</button>
+                            <button type="button" class="btn btn-danger" style="margin-left: 5px" (click)='deleteTitle(jobTitle)'>
+                                <span class="glyphicon glyphicon-remove"></span>Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+    <!-- / .col-lg-12 -->  
+</div>
+<!-- / .row --> 

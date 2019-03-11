@@ -1,0 +1,49 @@
+<div class="container-fluid" >
+  <form [formGroup]="job_position_form">
+      <div class="row">
+          <div class="col-lg-3">
+              
+                  <div class="form-group">
+                      <label>Job Position Code </label>
+                      <input class="form-control" formControlName="job_position_code">
+                  </div>
+              
+          </div>
+          <!-- / .col-lg-3 -->
+          <div class="col-lg-3">
+              
+                  <div class="form-group">
+                      <label>Job Position Name </label>
+                      <input class="form-control" formControlName="job_position_name">
+                  </div>
+              
+          </div>
+          <!-- / .col-lg-3 --> 
+      </div>
+      <!-- / .row --> 
+      <div class="row">
+          <div class="col-lg-3">
+              
+                  <div class="form-group">
+                      <label for="alias">Alias </label>
+                      <input type="password" class="form-control" id="alias" name="Alias" formControlName="job_position_alias">
+                  </div>
+              
+          </div>
+          <!-- / .col-lg-3 -->
+      </div>
+      <!-- / .row --> 
+      <div class="row">
+          <div class="col-lg-12">
+          <div class="form-group">
+              <!-- <label>File input</label>
+              <input type="file"> -->
+          </div>
+          </div>
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-primary" (click) = 'saveJobPosition()'>{{!isUpdate ? 'save' : 'update'}}</button>
+      </div>
+  </form>
+          
+</div>

@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <form [formGroup]="grade_form">
+      <div class="row">
+          <div class="col-lg-3">
+
+              <div class="form-group">
+                  <label>Grade Code </label>
+                  <input class="form-control" formControlName="grade_code">
+              </div>
+
+          </div>
+          <!-- / .col-lg-3 -->
+          <div class="col-lg-3">
+
+              <div class="form-group">
+                  <label>Grade Name </label>
+                  <input class="form-control" formControlName="grade_name">
+              </div>
+
+          </div>
+          <!-- / .col-lg-3 -->
+      </div>
+      <!-- / .row -->
+      <div class="row">
+          <div class="col-lg-3">
+
+              <div class="form-group">
+                  <label for="alias">Alias </label>
+                  <input formControlName="grade_alias" type="password" class="form-control" id="alias" name="Alias">
+              </div>
+
+          </div>
+          <!-- / .col-lg-3 -->
+      </div>
+      <!-- / .row -->
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="form-group">
+                  <!-- <label>File input</label>
+                  <input type="file"> -->
+              </div>
+          </div>
+      </div>
+      <div class='row'>
+        <button type="button" class="btn btn-primary m-r-5px" (click)="saveGrade()">{{ !isUpdate ? 'save': 'update' }}</button>
+      </div>
+  </form>
+</div>

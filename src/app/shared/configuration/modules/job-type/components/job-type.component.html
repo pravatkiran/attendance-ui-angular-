@@ -1,0 +1,8 @@
+<h3 class="text-primary" id="heading1">Job Type</h3>
+
+<app-job-type-form></app-job-type-form>
+    <div class="container-fluid">
+        <h4>Job Type List</h4>
+        <hr>
+        <app-job-type-list [jobTypes]='jobType' (onUpdate)="updateType($event)"></app-job-type-list>
+    </div>

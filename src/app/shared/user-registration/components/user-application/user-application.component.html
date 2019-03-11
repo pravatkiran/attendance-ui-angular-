@@ -1,0 +1,93 @@
+<form [formGroup]="user_application_form" (ngSubmit)="saveUserApplication()">
+  <div class="container-fluid" >
+      <br>
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="form-group">
+              <label>Apply Date</label>
+              <input formControlName ="apply_date" type="date" class="form-control">
+          </div>
+        </div>
+        <!-- / .col-lg-3 --> 
+      </div>
+      <!-- / .row --> 
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="form-group">
+              <label>Subject</label>
+              <input class="form-control" formControlName="subject">
+          </div>
+        </div>
+        <!-- / .col-lg-3 --> 
+        <div class="col-lg-3">
+          <div class="form-group">
+              <label>Leave Type</label>
+              <input class="form-control" formControlName="leave_type">
+          </div>
+        </div>
+      </div>
+      <!-- / .row --> 
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="form-group">
+              <label>Start Date</label>
+              <input type="date" class="form-control" formControlName="start_date">
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="form-group">
+              <label>End Date</label>
+              <input type="date" class="form-control" formControlName="end_date">
+          </div>
+        </div>
+      </div>
+      <!-- / .row --> 
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label>Application File</label>
+            <input type="file"  (change) = "onFileChange($event)" formControlName="application_file">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+  </div>
+
+  <br>
+  <div class="row">
+      <div class="col-lg-12">
+        <table datatable [dtOptions]= "dtOptions" [dtTrigger]= "dtTrigger"
+                class="table table-straped table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>Date Applied</th>
+              <th>Leave Type</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Approved By</th>
+              <th>Approved Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user-application of user-applications">
+              <td>{{user-application.apply_date}}</td>
+              <td>{{user-application.leave_type}}</td>
+              <td>{{user-application.start_date}}</td>
+              <td>{{user-application.end_date}}</td>
+              <td>{{user-application.approved_by}}</td>
+              <td>{{user-application.approved_date}}</td>
+              <td>{{user-application.status}}</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+      <!-- / .col-lg-12 --> 
+  </div>
+  <!-- / .row --> 
+</form>    

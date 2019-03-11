@@ -1,0 +1,8 @@
+<h3 class="text-primary" id="heading">Department </h3>
+ 
+<app-department-form></app-department-form>
+<div class="container-fluid" id="listcontainer">
+    <h4>Department List</h4>
+    <hr>
+    <app-department-list [departments]="departments" (onUpdate)="updateDepartment($event)"></app-department-list>
+</div>

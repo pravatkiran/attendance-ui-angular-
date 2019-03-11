@@ -1,0 +1,8 @@
+<h3 class="text-primary" id="heading1">Job Title</h3>
+
+<app-job-title-form></app-job-title-form>
+    <div class="container-fluid">
+        <h4>Job Title List </h4>
+        <hr>
+        <app-job-title-list [jobTitles]='jobTitle' (onUpdate)='updateTitle($event)'></app-job-title-list>
+    </div>

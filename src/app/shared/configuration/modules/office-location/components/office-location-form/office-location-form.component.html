@@ -1,0 +1,48 @@
+<div class="container-fluid" >
+  <form [formGroup]="office_location_form">
+      <div class="row">
+          <div class="col-lg-4">
+              
+                  <div class="form-group">
+                      <label>Office Location Code </label>
+                      <input class="form-control" formControlName="office_location_code">
+                  </div>
+              
+          </div>
+          <!-- / .col-lg-4 -->
+          <div class="col-lg-5">
+              
+                  <div class="form-group">
+                      <label>Office Location Name </label>
+                      <input class="form-control" formControlName="office_location_name">
+                  </div>
+              
+          </div>
+          <!-- / .col-lg-5 --> 
+      </div>
+      <!-- / .row --> 
+      <div class="row">
+          <div class="col-lg-3">
+              
+                  <div class="form-group">
+                      <label for="alias">Alias </label>
+                      <input formControlName="office_location_alias" type="password" class="form-control" id="alias" name="Alias">
+                  </div>
+              
+          </div>
+          <!-- / .col-lg-3 -->
+      </div>
+      <!-- / .row --> 
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="form-group">
+                  <!-- <label>File input</label>
+                  <input type="file"> -->
+              </div>
+          </div>
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-primary" (click)="saveOfficeLocation()">{{ !isUpdate ? 'save': 'update'}}</button>
+      </div>
+  </form>
+</div>

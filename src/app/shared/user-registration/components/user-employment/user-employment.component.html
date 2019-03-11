@@ -1,0 +1,274 @@
+<br>
+<div class="panel panel-default">
+    <div class="panel-heading">Job Information</div>
+    <div class="panle-body"><br>
+        <form [formGroup]="user_employment_form" >
+            <div class="container-fluid">
+                    <div class="row ">
+                        <div class="col-lg-2">
+                                <div class="form-group">
+                                    <label for="select1">Department </label>
+                                    <br>
+                                    <input fromControlName="department" type="text" class="form-control" id="select1" list="departments">
+                                    <datalist id="departments">
+                                    
+                                    </datalist>
+                                </div>
+                        </div>
+                        <!-- / .col-lg-2 (nested) --> 
+                        <span class="col-sm-1"><br>
+                            <app-modal>
+                                <span class="title">
+                                    Department List 
+                                </span>
+                                <div class="body" style="width: auto">
+                                    <app-department-list ></app-department-list>
+                                </div>
+                                <span class="footer">
+                                    <span style="float:right"> <button type="button" class="btn btn-sm btn-primary">Save</button></span>
+                                    <app-modal>
+                                        <span class="title">
+                                            Add department
+                                        </span> 
+                                        <div class="body">
+                                            <app-department-form></app-department-form>
+                                        </div>
+                                        <!-- <span class="footer">
+                                            <button type="button" class="btn btn-sm btn-primary" (click)="c('Save click')">Save</button>
+                                        </span> -->
+                                    </app-modal>
+                                </span>
+                                
+                            </app-modal>
+                        </span>
+                        <div class="col-lg-2">
+                            
+                                <div class="form-group">
+                                    <label for="select2">Job Position </label>
+                                    <br>
+                                    <input formControlName="job_position" type="text" class="form-control" id="select2" list="jobtitles">
+                                    <datalist id="job_position">
+                                        
+                                    </datalist>
+                                </div>
+                        </div>
+                        <!-- / .col-lg-2 (nested) -->   
+                        <span class="col-sm-1"><br>
+                            <app-modal>
+                                <span class="title">
+                                    Job Position List
+                                </span>
+                                <div class="body">
+                                    <app-job-position-list></app-job-position-list>
+                                </div>
+                                <span class="footer">
+                                    <span style="float:right"> <span class="footer">
+                                            <button type="button" class="btn btn-sm btn-primary" (click)="c('Save click')">Save</button>
+                                        </span></span>
+                                    <app-modal>
+                                        <span class="title">
+                                            Add Job Position
+                                        </span>
+                                        <div class="body">
+                                            <app-job-position-form></app-job-position-form>
+                                        </div>
+                                       
+                                    </app-modal>
+                                </span>
+                            </app-modal>
+                        </span> 
+                    </div> 
+                    <!-- / .row (nested) -->
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label for = "select3">Job Title</label>
+                                <br>
+                                <input formControlName="job_title" type="text" class="form-control" id="select3" list="jobtitles">
+                                <datalist id="jobtitles">
+                                
+                                </datalist>
+                            </div>
+                        </div>
+                        <!-- / .col-lg-2 -->
+                        <span class="col-sm-1"><br>
+                            <app-modal>
+                                <span class="title">
+                                    Job Title List 
+                                </span>
+                                <div class="body">
+                                    <app-job-title-list></app-job-title-list>
+                                </div>
+                                <span class="footer">
+                                    <span style="float:right">
+                                        <button type="button" class="btn btn-sm btn-primary" (click)="c('Save click')">Save</button>
+                                    </span>
+                                    <app-modal>
+                                        <span class="title">
+                                            Add Job title 
+                                        </span>
+                                        <div class="body">
+                                          <app-job-title-form></app-job-title-form>
+                                        </div>
+                                    
+                                    </app-modal>
+                                </span>
+                            </app-modal>
+                        </span> 
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label for="select4">Job Type</label>
+                                <br>
+                                <input type="text" formControlName="job_type" class="form-control" id="select4" list="jobtypes">
+                                <datalist id="jobtypes">
+                                    
+                                </datalist>
+                            </div>
+                        </div>
+                        <!-- / .col-lg-2 -->
+                        <span class="col-sm-1"><br>
+                            <app-modal>
+                                <span class="title">
+                                    Job Type List 
+                                </span>
+                                <div class="body">
+                                    <app-job-type-list></app-job-type-list>
+                                </div>
+                                <span class="footer">
+                                    <span style="float:right">
+                                        <button type="button" class="btn btn-sm btn-primary">Save</button>
+                                    </span>
+                                    <app-modal>
+                                        <span class="title">
+                                            Add Job Type
+                                        </span>
+                                        <div class="body">
+                                          <app-job-type-form></app-job-type-form>
+                                        </div>
+                                        
+                                    </app-modal>
+                                </span>
+                            </app-modal>
+                        </span> 
+                    </div>
+                    <!-- / .row -->
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="select5">Office Location</label>
+                                <br>
+                                <input type="text" fromControlName="office_location" class="form-control" id="select5" list="officelocations">
+                                <datalist id="officelocations">
+                                    
+                                </datalist>
+                            </div>
+                        </div>
+                        <span class="col-sm-1"><br>
+                            <app-modal>
+                                <span class="title" style="float:left">
+                                    Office Location List
+                                </span>
+                                <div class="body">
+                                    <app-office-location-list></app-office-location-list>
+                                </div>
+                                <span class="footer">
+                                    <span style="float:right">
+                                        <button type="submit" class="btn btn-sm btn-primary">Save</button>
+                                    </span>
+                                    <app-modal>
+                                        <span class="title">
+                                            Add Office Location
+                                        </span>
+                                        <div class="body">
+                                           <app-office-location-form></app-office-location-form>
+                                        </div>
+                                       
+                                    </app-modal>
+                                </span>
+                            </app-modal>
+                        </span> 
+                    </div>
+                    <!-- / .row -->
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label for="select6">Division</label>
+                                <br>
+                                <input type="text" formControlName="division" class="form-control" id="select6" list ="divisions">
+                                <datalist id="divisions">
+                                
+                                </datalist>
+                            </div>
+                        </div>
+                        <!-- / .col-lg-2 -->
+                        <span class="col-sm-1"><br>
+                            <app-modal>
+                                <span class="title">
+                                    Division List 
+                                </span>
+                                <div class="body">
+                                    <app-division-list></app-division-list>
+                                </div>
+                                <span class="footer">
+                                    <span>
+                                        <button type="submit" class="btn btn-sm btn-primary">Save</button>
+                                    </span>
+                                    <app-modal>
+                                        <span class="title">
+                                            Add Division
+                                        </span>
+                                        <div class="body">
+                                            <app-division-form></app-division-form>
+                                        </div>
+                                        
+                                    </app-modal>
+                                </span>
+                            </app-modal>
+                        </span> 
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label for="select7">Grade</label>
+                                <br>
+                                <input type="text" formControlName="grade" class="form-control" id="select 7" list= "grades">
+                                <datalist id="grades">
+                                
+                                </datalist>
+                            </div>
+                        </div>
+                        <span class="col-sm-1"><br>
+                            <app-modal>
+                                <span class="title">
+                                    Grade List 
+                                </span>
+                                <div class="body">
+                                    <app-grade-list></app-grade-list>
+                                </div>
+                                <span class="footer" >
+                                    <span style="float:right">
+                                        <button type="submit" class="btn btn-sm btn-primary">Save</button>
+                                    </span>
+                                    <app-modal>
+                                        <span class="title">
+                                            Add Grade 
+                                        </span>
+                                        <div class="body">
+                                           <app-grade-form></app-grade-form>
+                                        </div>
+                                       
+                                    </app-modal>
+                                </span>
+                            </app-modal>
+                        </span> 
+                    </div>
+                    <!-- / .row -->
+                    <div class="row">
+                        <p class="text-align:center ">
+                            <button class="btn btn-primary" id="button2" (click)="saveUserEmployment(userEmployment)">Save</button>
+                            <button class="btn btn-primary">Cancel</button>
+                        </p>
+                    </div>        
+            </div>
+        </form>
+    </div>
+</div>
+<!-- / .panel -->

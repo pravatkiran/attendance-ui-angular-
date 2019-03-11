@@ -1,0 +1,181 @@
+<br>
+<form [formGroup]="formpersonal" >
+    <div class="container-fluid" style="background-color:rgba(153, 201, 202, 0.205);">
+    
+            <legend>Pesonal Information</legend>
+            <div class="row">
+                <div class="col-lg-2">
+
+                    <div class="form-group">
+                        <label>User Code </label>
+                        <input formControlName = "user_code" class="form-control">
+                    </div>
+
+                </div>
+                <!-- /.col-lg-2 (nested) -->
+            </div>
+            <!-- /.row (nested) -->
+            <div class="row">
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label>First Name </label>
+                            <input formControlName="first_name" class="form-control">
+                        </div>
+                    
+                </div>
+                <!-- /.col-lg-3 (nested) -->
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label>Middle Name </label>
+                            <input formControlName="middle_name" class="form-control">
+                        </div>
+                    
+                </div>
+                <!-- /.col-lg-3 (nested) -->
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label>Last Name </label>
+                            <input formControlName="last_name" class="form-control">
+                        </div>
+                    
+                </div>
+                <!-- /.col-lg-3 (nested) -->
+            </div>
+            <!-- /.row (nested) -->
+        
+    </div>
+    <hr>
+    <div class="container-fluid" style="background-color:rgb(153, 201, 202, 0.205);">
+        <fieldset>
+            <legend>Address</legend>
+            <div class="row">
+                <div class="col-lg-2">
+                    
+                        <div class="form-group">
+                            <label>House Number </label>
+                            <input formControlName = "house_number" class="form-control">
+                        </div>
+                    
+                </div>
+                <!-- /.col-lg-2 (nested) -->
+                <div class="col-lg-4">
+                    
+                        <div class="form-group">
+                            <label>Street </label>
+                            <input formControlName="street" class="form-control">
+                        </div>
+                    
+                </div>
+                <!-- /.col-lg-4 (nested) -->
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    
+                        <div class="form-group">
+                            <label>Ward </label>
+                            <input formControlName="ward" class="form-control">
+                        </div>
+                    
+                </div>
+                <!-- /.col-lg-2 (nested) -->
+                <div class="col-lg-4">
+                    
+                        <div class="form-group">
+                            <label>Municipality </label>
+                            <input formControlName="municipality" class="form-control">
+                        </div>
+                    
+                </div>
+                <!-- /.col-lg-4 (nested) -->
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label>District </label>
+                            <input formControlName="district" class="form-control">
+                        </div>
+                    
+                </div>
+                <!-- /.col-lg-3 (nested) -->
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label>Province </label>
+                            <input class="form-control" formControlName="province">
+                        </div>
+                    
+                </div>
+                <!-- /.col-lg-3 (nested) -->
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label>Country </label>
+                            <input class="form-control" formControlName="country">
+                        </div>
+                    
+                </div>
+                <!-- /.col-lg-3 (nested) -->
+            </div>
+        </fieldset>
+    </div>
+    <hr>
+    <div class="container-fluid" style="background-color:rgb(153, 201, 202, 0.205);">
+        <fieldset>
+            <legend>Contact</legend>
+            <div class="row">
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label>Phone </label>
+                            <input class="form-control" formControlName="phone">
+                        </div>
+                    
+                </div>
+                <!-- / .col-lg-3 (nested) -->
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label>Mobile </label>
+                            <input class="form-control" formControlName="mobile">
+                        </div>
+                    
+                </div>
+                <!-- / .col-lg-3 (nested) -->
+                <div class="col-lg-3">
+                    
+                        <div class="form-group">
+                            <label>Home Phone </label>
+                            <input class="form-control" formControlName="home_phone">
+                        </div>
+                    
+                </div>
+                <!-- / .col-lg-3 (nested) -->
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    
+                        <div class="form-group">
+                            <label>Email </label>
+                            <input class="form-control" formControlName="email">
+                        </div>
+                    
+                </div>
+                <!-- / .col-lg-3 (nested) -->
+            </div>
+            <!-- / .row -->
+        </fieldset>
+    </div>
+    <br>
+    <div class="container-fluid justified">
+        <div class="row">
+            <p class="text-align:center ">
+                <button class="btn btn-primary" id="button3" (click)='saveUserInfo(userInfo)'>Save</button>
+                <button (click)="cancelUserInfo()" class="btn btn-primary">Cancel</button>
+            </p>
+        </div>              
+    </div>
+</form>

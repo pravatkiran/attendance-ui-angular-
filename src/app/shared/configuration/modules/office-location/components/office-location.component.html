@@ -1,0 +1,7 @@
+<h3 class="text-primary" id="heading1">Office Location</h3>
+<app-office-location-form> </app-office-location-form>
+    <div class="container-fluid">
+    <h4>Office Location List</h4>
+    <hr>
+    <app-office-location-list [officeLocations]= 'officeLocation' (onUpdate)="updateOfficeLocation($event)"></app-office-location-list>
+    </div>

@@ -1,0 +1,7 @@
+<h3 class="text-primary " id="heading 1">Job Position</h3>
+
+<app-job-position-form></app-job-position-form>
+<div class="container-fluid" id="listcontainer">
+    <h4>Job Position List</h4>
+    <app-job-position-list [jobPositions] = 'jobPositions'  (onUpdate)='updateJobPosition($event)'></app-job-position-list>
+</div>
